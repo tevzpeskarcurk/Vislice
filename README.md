@@ -1,6 +1,6 @@
 # Vislice
 
 
-Vaje po netu so cist jadne
+borut pahor
 Matija Pretnar
 Ivan Vidav
