@@ -1,1 +1,1 @@
-print [x for x in range(1, 201) if not [t for t in range(2,x) if not x%t]]
+print([x for x in range(1, 201) if not [t for t in range(2,x) if not x%t]])
