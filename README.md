@@ -1,6 +1,6 @@
 # Vislice
 
 
-Janez Janša
+Janez Janša 
 Matija Pretnar
 Ivan Vidav
