@@ -1,6 +1,6 @@
 # Vislice
 
 
-Borut Pahor
+Janez Janša
 Matija Pretnar
 Ivan Vidav
