@@ -1,6 +1,6 @@
 # Vislice
 
 
-Janez Janša 
+Vaje po netu so cist jadne
 Matija Pretnar
 Ivan Vidav
