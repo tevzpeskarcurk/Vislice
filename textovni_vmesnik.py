@@ -6,7 +6,7 @@ def izpis_igre(igra):
             '{pravilni_del_gesla}\n\n'
             'Neuspeli poizkusi: {neuspeli_poizkusi} \n\n'
 ).format(
-    stevilo_preostalih_poizkusov=model.stevilo_dovoljenih_napak - igra.stevilo_napak() + 1,
+    stevilo_preostalih_poizkusov=model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak() + 1,
     pravilni_del_gesla=igra.pravilni_del_gesla(),
     neuspeli_poizkusi=igra.nepravilni_ugibi()
 )
@@ -27,6 +27,7 @@ def zahtevaj_vnos():
 
 def pozeni_vmesnik():
     igra = model.nova_igra()
+    print(igra.geslo)
     while True:
         print(izpis_igre(igra))
         poskus = zahtevaj_vnos()
@@ -34,17 +35,18 @@ def pozeni_vmesnik():
         if igra.zmaga():
             print(izpis_zmage(igra))
             ponovni_zagon = input('Za ponovni zagon vpišite 1 ')
-            if ponovni_zagon == 1:
+            if ponovni_zagon == '1':
                 igra = model.nova_igra()
             else:
                 break
         elif igra.poraz():
             print(izpis_poraza(igra))
-            ponovni_zagon = input('Za ponovni zagon vpišite 1 ')
-            if ponovni_zagon == 1:
-                igra = model.nova_igra()
-            else:
-                break
+            break
+            #ponovni_zagon = input('Za ponovni zagon vpišite 1 ')
+            #if ponovni_zagon == '1':
+            #    igra = model.nova_igra()
+            #else:
+                #break
     return
 
 pozeni_vmesnik()

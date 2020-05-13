@@ -1,11 +1,11 @@
 import random
 
-stevilo_dovoljenih_napak = 9
-pravilna_crka = '+'
-napacna_crka = '-'
-ponovljena_crka = 'o'
-zmaga = 'W'
-poraz = 'X'
+STEVILO_DOVOLJENIH_NAPAK = 9
+PRAVILNA_CRKA = '+'
+NAPACNA_CRKA = '-'
+PONOVLJENA_CRKA = 'o'
+ZMAGA = 'W'
+PORAZ = 'X'
 
 class Igra:
     def __init__(self, geslo, crke=None):
@@ -31,7 +31,7 @@ class Igra:
         return True
     
     def poraz(self):
-        return self.stevilo_napak() < stevilo_dovoljenih_napak
+        return self.stevilo_napak() > STEVILO_DOVOLJENIH_NAPAK
 
     def pravilni_del_gesla(self):
         delni = ''
@@ -52,21 +52,20 @@ class Igra:
             return ponovljena_crka
         else:
             self.crke.append(crka)
-
             if crka in self.geslo:
                 if self.zmaga():
-                    return zmaga
+                    return ZMAGA
                 else:
-                    return pravilna_crka
+                    return PRAVILNA_CRKA
             else:
                 if self.poraz():
-                    return poraz
+                    return PORAZ
                 else:
-                    return napacna_crka
+                    return NAPACNA_CRKA
 
 
 #     C:\\UVP\\Github_in_Git\\Repozitoriji\\Vislice\\besede.txt 
-with open('.\\besede.txt', 'r', encoding='utf8') as datoteka_z_besedami:
+with open('C:\\UVP\\Github_in_Git\\Repozitoriji\\Vislice\\besede.txt', 'r', encoding='utf8') as datoteka_z_besedami:
     bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami]
 
 
