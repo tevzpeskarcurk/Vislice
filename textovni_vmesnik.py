@@ -9,15 +9,18 @@ def izpis_igre(igra):
     pravilni_del_gesla=igra.pravilni_del_gesla(),
     neuspeli_poizkusi=igra.nepravilni_ugibi()
 )
-return text
+    return text
 
 def izpis_zmage(igra):
     text = (
-        '\r####### Wiiipiiii zmaga geslo je bilo {geslo}\n\n'
+        '\r####### Wiiipiiii zmaga geslo je bilo {geslo}#######\n\n'
     ).format(geslo=igra.geslo)
-
+    return text
 def izpis_poraza(igra):
-    pass
+    text = (
+        '\r####### Booooo izgubil si geslo je bilo {geslo}#######\n\n'
+    ).format(geslo=igra.geslo)
+    return text
 def zahtevaj_vnos():
     return input('Črka: ')
 
