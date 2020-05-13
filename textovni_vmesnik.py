@@ -19,7 +19,7 @@ def izpis_poraza(igra):
 def zahtevaj_vnos():
     return input('Črka: ')
 
-def pozeni_vmesnik()
+def pozeni_vmesnik():
     igra = model.nova_igra()
 
     while True:
