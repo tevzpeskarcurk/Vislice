@@ -1,4 +1,4 @@
-
+import model
 def izpis_igre(igra):
     text = (
             'Število preostalih poizkusov: {stevilo_preostalih_poizkusov} \n\n'
@@ -38,4 +38,4 @@ def pozeni_vmesnik():
             break
     return
 
-
+pozeni_vmesnik()
