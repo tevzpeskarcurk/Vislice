@@ -27,7 +27,6 @@ def zahtevaj_vnos():
 
 def pozeni_vmesnik():
     igra = model.nova_igra()
-    print(igra.geslo)
     while True:
         print(izpis_igre(igra))
         poskus = zahtevaj_vnos()
@@ -50,3 +49,4 @@ def pozeni_vmesnik():
     return
 
 pozeni_vmesnik()
+
