@@ -65,8 +65,8 @@ class Igra:
                     return napacna_crka
 
 
-        
-with open('besede.txt', 'r', encoding='utf8') as datoteka_z_besedami:
+#     C:\\UVP\\Github_in_Git\\Repozitoriji\\Vislice\\besede.txt 
+with open('.\\besede.txt', 'r', encoding='utf8') as datoteka_z_besedami:
     bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami]
 
 
