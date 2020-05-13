@@ -5,15 +5,17 @@ def izpis_igre(igra):
             '{pravilni_del_gesla}\n\n'
             'Neuspeli poizkusi: {neuspeli_poizkusi} \n\n'
 ).format(
-    stevilo_preostalih_poizkusov = model.stevilo_dovoljenih_napak - igra.stevilo_napak() + 1,
-    pravilni_del_gesla = igra.pravilni_del_gesla(),
-    neuspeli_poizkusi = igra.nepravilni_ugibi()
+    stevilo_preostalih_poizkusov=model.stevilo_dovoljenih_napak - igra.stevilo_napak() + 1,
+    pravilni_del_gesla=igra.pravilni_del_gesla(),
+    neuspeli_poizkusi=igra.nepravilni_ugibi()
 )
 return text
 
 def izpis_zmage(igra):
-#geslo = igra.geslo
-    pass
+    text = (
+        '\r####### Wiiipiiii zmaga geslo je bilo {geslo}\n\n'
+    ).format(geslo=igra.geslo)
+
 def izpis_poraza(igra):
     pass
 def zahtevaj_vnos():
