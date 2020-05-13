@@ -1,4 +1,5 @@
 import model
+
 def izpis_igre(igra):
     text = (
             'Število preostalih poizkusov: {stevilo_preostalih_poizkusov} \n\n'
@@ -26,7 +27,6 @@ def zahtevaj_vnos():
 
 def pozeni_vmesnik():
     igra = model.nova_igra()
-
     while True:
         print(izpis_igre(igra))
         poskus = zahtevaj_vnos()

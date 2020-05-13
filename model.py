@@ -19,13 +19,13 @@ class Igra:
         return [crka for crka in self.crke if crka not in self.geslo]
     
     def pravilne_crke(self):
-        return [crka for crka in self.crka if crka in self.geslo]
+        return [crka for crka in self.crke if crka in self.geslo]
 
     def stevilo_napak(self):
         return len(self.napacne_crke())
         
     def zmaga(self):
-        for crke in self.geslo:
+        for crka in self.geslo:
             if not crka in self.crke:
                 return False
         return True
@@ -33,7 +33,7 @@ class Igra:
     def poraz(self):
         return self.stevilo_napak() < stevilo_dovoljenih_napak
 
-    def pravilni_del_gesla():
+    def pravilni_del_gesla(self):
         delni = ''
         for crka in self.geslo:
             if crka in self.crke:
@@ -66,12 +66,12 @@ class Igra:
 
 
         
-with open(besede.txt, 'r', encoding='utf8') as datoteka_z_besedami:
-    bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami
+with open('besede.txt', 'r', encoding='utf8') as datoteka_z_besedami:
+    bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami]
 
 
 def nova_igra():
-    return Igra(random.choise(bazen_besed))
+    return Igra(random.choice(bazen_besed))
 
 
 
