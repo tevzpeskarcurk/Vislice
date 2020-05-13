@@ -23,14 +23,14 @@ def pozeni_vmesnik():
     igra = model.nova_igra()
 
     while True:
-    print(izpis_igre(igra))
-    poskus = zahtevaj_vnos()
-    igra.ugibaj(poskus)
-    if igra.zmaga():
-        print(izpis_zmage(igra))
-    elif igra.poraz():
-        print(izpis_poraza(igra))
-        break
-return
+        print(izpis_igre(igra))
+        poskus = zahtevaj_vnos()
+        igra.ugibaj(poskus)
+        if igra.zmaga():
+            print(izpis_zmage(igra))
+        elif igra.poraz():
+            print(izpis_poraza(igra))
+            break
+    return
 
 
