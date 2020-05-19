@@ -49,7 +49,7 @@ class Igra:
     def ugibaj(self, ugib):
         crka = ugib.upper()
         if crka in self.crke:
-            return ponovljena_crka
+            return PONOVLJENA_CRKA
         else:
             self.crke.append(crka)
             if crka in self.geslo:
