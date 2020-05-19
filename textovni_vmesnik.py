@@ -40,12 +40,11 @@ def pozeni_vmesnik():
                 break
         elif igra.poraz():
             print(izpis_poraza(igra))
-            break
-            #ponovni_zagon = input('Za ponovni zagon vpišite 1 ')
-            #if ponovni_zagon == '1':
-            #    igra = model.nova_igra()
-            #else:
-                #break
+            ponovni_zagon = input('Za ponovni zagon vpišite 1 ')
+            if ponovni_zagon == '1':
+                igra = model.nova_igra()
+            else:
+                break
     return
 
 pozeni_vmesnik()
