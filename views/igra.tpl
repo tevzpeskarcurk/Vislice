@@ -36,7 +36,7 @@ import model
 </form>
 
 
-% elif psokus == model.PORAZ:
+% elif poskus == model.PORAZ:
 <h1>BOOOO LOSER!</h1>
 
 Pavilno geslo : {{igra.geslo}}
