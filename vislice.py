@@ -5,6 +5,6 @@ vislice = model.Vislice()
 
 @bottle.get('/')
 def index():
-    return bottle.template('index.tpl')
+    return bottle.template('C:\\UVP\\Github_in_Git\\Repozitoriji\\Vislice\\views\\index.tpl')
 
 bottle.run(reloader=True, debug=True)
