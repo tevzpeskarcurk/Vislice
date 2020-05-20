@@ -7,4 +7,4 @@ vislice = model.Vislice()
 def index():
     return bottle.template('index.tpl')
 
-botlle.run(reloader=True, debug=True)
+bottle.run(reloader=True, debug=True)
