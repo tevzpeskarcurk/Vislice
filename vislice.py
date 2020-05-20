@@ -5,7 +5,7 @@ vislice = model.Vislice()
 
 @bottle.get('/')
 def index():
-    return bottle.template('index.tpl')
+    return bottle.template('Vislice\\views\\index.tpl')
 
 
 @bottle.post('/igra/')
@@ -17,7 +17,7 @@ def nova_igra():
 @bottle.get('/igra/<id_igre:int>/')
 def pokazi_igro(id_igre):
     igra, poskus = vislice.igre[id_igre]
-    return bottle.template('igra.tpl', id_igre=id_igre, igra=igra,poskus=poskus)
+    return bottle.template('Vislice\\views\\igra.tpl', id_igre=id_igre, igra=igra,poskus=poskus)
 
 
 @bottle.post('/igra/<id_igre:int>/')
@@ -27,9 +27,10 @@ def ugibaj(id_igre):
     bottle.redirect('/igra/{}/'.format(id_igre))
     
 
-@bottle.get('ing/<picture>')
+@bottle.get('/img/<picture>')
 def serve_picture(picture):
-    return bottle.static_file(picture, root='img')
+    return bottle.static_file(picture, root='Vislice\\img')
     
+
     
-bottle.run(reloader=True, debug=True)
+bottle.run(port=8000, reloader=True, debug=True)

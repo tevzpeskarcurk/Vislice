@@ -41,7 +41,7 @@ class Igra:
                 delni += crka + ' '
             else:
                 delni += '_ '
-        return delni[-1]
+        return delni[:-1]
     
     def nepravilni_ugibi(self):
         return ' '.join(self.napacne_crke())
@@ -87,11 +87,11 @@ class Vislice:
     def nova_igra(self):
         igra = nova_igra()
         id_igre = self.prost_id_igre()
-        self.igre[id_igre] = {igra, ZACETEK}
+        self.igre[id_igre] = (igra, ZACETEK)
         return id_igre
 
     def ugibaj(self, id_igre, crka):
         igra, _ = self.igre[id_igre]
         poskus = igra.ugibaj(crka)
-        self.igre[id_igre] = {igra, poskus}
+        self.igre[id_igre] = (igra, poskus)
 
