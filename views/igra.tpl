@@ -48,7 +48,7 @@ Pavilno geslo : {{igra.geslo}}
 % else:
 <form action="/igra/{{id_igre}}" method="post">
     Črka: <input type="text" name="crka">
-    <button type="submit">Pošlji ugib</button>
+    <button type="submit">Ugibaj</button>
 </form>
 % end
 </body>
