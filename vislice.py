@@ -5,7 +5,7 @@ vislice = model.Vislice()
 
 @bottle.get('/')
 def index():
-    return bottle.template('./index.tpl')
+    return bottle.template('index.tpl')
 
 
 @bottle.post('/igra/')
