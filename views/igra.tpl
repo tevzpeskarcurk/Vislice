@@ -24,7 +24,7 @@
 </tr>
 <tr>
     <td>
-        <img src="../../img/{{igra.stevilo_napak()}}.jpg" alt="obesanje">
+        <img src="../../img/{{igra.stevilo_napak()}}.jpg" alt="obesanje"> 
     </td>
 </tr>
 </table>
@@ -37,7 +37,7 @@
 
 
 % elif poskus == model.PORAZ:
-<h1>BOOOO LOSER!</h1>
+<h1>BITCH YOU'Z HANGIN!</h1>
 
 Pavilno geslo : {{igra.geslo}}
 
